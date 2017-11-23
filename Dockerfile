@@ -9,12 +9,12 @@ MAINTAINER Ryo Ota <nwtgck@gmail.com>
 RUN apt update
 RUN apt install -y software-properties-common
 RUN apt-add-repository ppa:openjdk-r/ppa
-
 RUN apt update && apt install -y openjdk-8-jdk
 RUN java -version
 
+# Install sbt
 RUN apt -y install apt-transport-https
-RUN echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+RUN echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
 RUN apt update && apt install -y sbt
 RUN sbt sbtVersion
