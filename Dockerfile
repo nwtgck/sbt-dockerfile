@@ -17,6 +17,7 @@ RUN apt -y install apt-transport-https
 RUN echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
 RUN apt update && apt install -y sbt
+RUN apt install -y bc
 RUN sbt sbtVersion
 
 # Clean
