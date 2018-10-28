@@ -2,7 +2,7 @@
 
 
 FROM ubuntu:16.04
-MAINTAINER Ryo Ota <nwtgck@gmail.com>
+LABEL maintainer="Ryo Ota <nwtgck@gmail.com>"
 
 
 # Install JDK 8
