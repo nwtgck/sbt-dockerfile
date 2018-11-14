@@ -1,7 +1,7 @@
 # ---- Create a SBT on Ubuntu Environment ----
 
 
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 LABEL maintainer="Ryo Ota <nwtgck@gmail.com>"
 
 
